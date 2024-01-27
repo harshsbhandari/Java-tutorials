@@ -1,0 +1,40 @@
+OVERVIEW
+Java is a statically-typed, object-oriented programming language. It’s also platform-independent — Java programs can be written and compiled on one type of machine, such as a Windows system, and executed on another, such as MacOS, without any modification to the source code.
+
+DATA TYPES
+There are two broad categories of data types in Java: primitive types and objects/reference types.
+
+Primitive types are the basic data types that store simple data and form the foundation of data manipulation. For example, Java has primitive types for integer values (int, long, byte, short), floating-point values (float and double), character values (char), and logical values (boolean).
+
+On the other hand, reference types are objects that contain references to values and/or other objects, or to the special value null to denote the absence of value.
+
+The String class is a good example of a reference type. An instance of the class, called an object, represents a sequence of characters, such as “Hello World”.
+
+JAVA KEYWORDS
+Keywords are reserved words that have special meaning in Java.
+
+For example, public, static, class, main, new, instanceof, are keywords in Java, and as such, we can’t use them as identifiers (variable names).
+
+JAVA PROGRAM STRUCTURE
+The basic unit of a Java program is a Class. A Class can have one or more fields (sometimes called properties), methods, and even other class members called inner classes.
+
+For a Class to be executable, it must have a main method. The main method signifies the entry point of the program.
+
+public class LearnJava{
+    public static void main(String[] args){
+        System.out.println("Java is easy to learn");
+    }
+}
+
+The segment of code between an opening and closing curly braces is called a code block.
+
+The source code for a Java program is stored in a file with an extension of .java.
+
+COMPILING AND EXECUTING A PROGRAM
+To execute our source code, we first need to compile it. This process will generate a binary file with the .class file extension. We can execute the binary file on any machine that has a Java Runtime Environment (JRE) installed.
+
+javac LearnJava.java
+Above command will compiles LearnJava.java file and creates a LearnJava.class file.
+
+java LearnJava
+Above line will run the LearnJava.class file, but the machine must have JRE installed.

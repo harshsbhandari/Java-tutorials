@@ -1,0 +1,36 @@
+OVERVIEW
+The Java Programming Language features eight primitive data types.
+
+PRIMITIVE DATA TYPE
+The eight primitives defined in Java are int, byte, short, long, float, double, boolean and char. These aren’t considered objects and represent raw values.
+
+They’re stored directly on the stack
+
+OVERFLOW AND UNDERFLOW
+The primitive data types have size limits. But what happens if we try to store a value that’s larger than the maximum value?
+
+We run into a situation called overflow.
+
+When an integer overflows, it rolls over to the minimum value and begins counting up from there.
+
+Floating point numbers overflow by returning Infinity:
+
+int i = Integer.MAX_VALUE;
+int j = i + 1;
+// j will roll over to -2_147_483_648
+
+double d = Double.MAX_VALUE;
+double o = d + 1;
+// o will be Infinity
+
+Underflow is the same issue except it involves storing a value smaller than the minimum value. When the numbers underflow, they return 0.0.
+
+AUTOBOXING
+Each primitive data type also has a full Java class implementation that can wrap it. For instance, the Integer class can wrap an int. There is sometimes a need to convert from the primitive type to its object wrapper (e.g., using them with generics).
+
+Luckily, Java can perform this conversion for us automatically, a process called Autoboxing:
+
+Integer i = 1;
+Character c = 'a';
+
+

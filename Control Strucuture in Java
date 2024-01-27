@@ -1,0 +1,41 @@
+OVERVIEW
+In the most basic sense, a program is a list of instructions. Control structures are programming blocks that can change the path we take through those instructions.
+There are three kinds of control structures:
+
+Conditional Branches, which we use for choosing between two or more paths. There are three types in Java: if/else/else if, ternary operator and switch.
+Loops that are used to iterate through multiple values/objects and repeatedly run specific code blocks. The basic loop types in Java are for, while and do while.
+Branching Statements, which are used to alter the flow of control in loops. There are two types in Java: break and continue.
+
+IF/ELSE/ELSE IF
+Theoretically, we can infinitely chain or nest if/else blocks but this will hurt code readability, and that’s why it’s not advised.
+
+TERNARY OPERATOR
+System.out.println((a > 0) ? "Positive" : "Zero or Negative");
+
+We can use a ternary operator as a shorthand expression that works like an if/else statement.
+
+SWITCH
+int count = 3;
+switch (count) {
+    case 0:
+        System.out.println("Count is equal to 0");
+        break;
+    case 1:
+        System.out.println("Count is equal to 1");
+        break;
+    default:
+        System.out.println("Count is either negative, or higher than 1");
+        break;
+}
+Three or more if/else statements can be hard to read. As one of the possible workarounds, we can use switch, as seen above.
+
+Do not forget to put 'break', if you want to make your code run for only one specific condition.
+
+LOOPS
+We use loops when we need to repeat the same code multiple times in succession.
+
+BREAK
+We need to use break to exit early from a loop.
+
+CONTINUE
+Simply put, continue means to skip the rest of the loop we’re in

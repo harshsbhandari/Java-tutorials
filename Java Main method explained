@@ -1,0 +1,45 @@
+OVERVIEW
+Every program needs a place to start its execution; talking about Java programs, that’s the main method.
+
+COMMON SIGNATURE
+The most common main method template is:
+public static void main(String[] args){}
+
+That’s the way we’ve learned it, that’s the way the IDE autocompletes the code for us. But that’s not the only form this method can assume, there are some valid variants we can use and not every developer pays attention to this fact.
+
+Before we dive into those method signatures, let’s review the meaning of each keyword of the common signature:
+
+public – access modifier, meaning global visibility
+static – the method can be accessed straight from the class, we don’t have to instantiate an object to have a reference and use it
+void – means that this method doesn’t return a value
+main – the name of the method, that’s the identifier JVM looks for when executing a Java program
+As for the args parameter, it represents the values received by the method. This is how we pass arguments to the program when we first start it.
+
+java CommonMainMethodSignature foo bar
+
+Above methods is run command to this - CommonMainMethodSignature.class file where "foo" and "bar" are the input parameters provided by the user args[0] == "foo" and args[1] == "bar"
+
+public class CommonMainMethodSignature{
+    public static void main(String[] args) {
+        if (args.length > 0) {
+            if (args[0].equals("test")) {
+                // load test parameters
+            } else if (args[0].equals("production")) {
+                // load production parameters
+            }
+        }
+    }
+}
+
+It’s always good to remember that IDEs can also pass arguments to the program.
+
+HAVING MORE THAN ONE MAIN METHODS
+We can also define more than one main method inside our application.
+
+To specify which main method the JVM should execute as the entry point of our application, we use the MANIFEST.MF file. Inside the manifest, we can indicate the main class:
+
+Main-Class: mypackage.ClassWithMainMethod
+
+This is mostly used when creating an executable .jar file. We indicate which class has the main method to start the execution, through the manifest file located at META-INF/MANIFEST.MF (encoded in UTF-8).
+
+
